@@ -3,13 +3,13 @@ import React, { useState } from "react";
 function NewTaskForm({onTaskFormSubmit, categories}) {
   
   const [text, setText] = useState("");
-  const [category, setCategory] = useState("Code");
+  const [category, setCategory] = useState("All");
   
   function handleSubmit(e) {
     e.preventDefault();
     onTaskFormSubmit({text, category})
     setText("")
-    setCategory("Code")
+    setCategory("All")
   }
 
   return (
